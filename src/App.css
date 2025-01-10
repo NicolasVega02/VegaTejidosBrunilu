@@ -1,16 +1,22 @@
 h1 {
-  background-color: aqua;
+  background-color: rgb(206, 238, 26);
   padding: 25px;
 
-  color: blueviolet;
+  color: rgb(0, 0, 0);
 }
 .contenedorNavBar {
-  background-color: greenyellow;
+  background-color: rgb(255, 145, 0);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
 }
 .navHome {
-  font-weight: bolder;
+  width: 7%;
+}
+.imgLogo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20%;
 }
