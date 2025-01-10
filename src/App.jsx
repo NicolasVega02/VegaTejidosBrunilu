@@ -1,17 +1,20 @@
 
 import './App.css'
-
+import ComponenteDePrueba from './components/ComponenteDePrueba'
+import NavBar from './components/NavBar'
+import ItemListContainer from './components/ItemListContainer'
 function App() {
   
-  const bienvenida = ' Bienvenidos a Tejidos Brunilu' 
+  const greeting  = 'Bienvenidos a Tejidos Brunilu' 
   return (
     <div>
-      <h1 className='h1' >{bienvenida}</h1>
-      <p style={{color : 'greenyellow', fontWeight : 'bolder'}}>
-        Holaaaa😊
-      </p>
+      <NavBar/>
+      <ItemListContainer>{greeting}
+      </ItemListContainer>
     </div>
+   
   )
 }
+
 
 export default App

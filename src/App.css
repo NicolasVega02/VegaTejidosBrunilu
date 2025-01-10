@@ -4,6 +4,13 @@ h1 {
 
   color: blueviolet;
 }
-body {
-  background-color: black;
+.contenedorNavBar {
+  background-color: greenyellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.navHome {
+  font-weight: bolder;
 }
