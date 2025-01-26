@@ -1,16 +1,27 @@
 
 import './App.css'
-import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailcontainer'
+import NavBarReactBootstrap from './components/NavBarReactBootstrap'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+
+
 function App() {
   
   
   return (
-    <div>
-      <NavBar/>
-      <ItemListContainer greeting ={'Bienvenido a Tejidos Brunilu'}>
-      </ItemListContainer>
-    </div>
+    
+   
+    
+    <BrowserRouter>
+      <NavBarReactBootstrap/>
+      <Routes>
+        <Route path ='/' element = {<ItemListContainer greeting ='Bienvenido a Tejidos Brunilu'></ItemListContainer>}/>
+        <Route path='/category/:categoryId' element={<ItemListContainer greeting='Categoria : '/>}/>
+        <Route path='/item/:id' element = {<ItemDetailContainer/>}/>
+        
+      </Routes>
+    </BrowserRouter>
    
   )
 }

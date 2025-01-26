@@ -4,19 +4,39 @@ h1 {
 
   color: rgb(0, 0, 0);
 }
+
 .contenedorNavBar {
-  background-color: rgb(255, 145, 0);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
+  background-color: #fd7e14;
 }
 .navHome {
   width: 7%;
 }
 .imgLogo {
-  width: 100%;
+  width: 6.5rem;
   height: auto;
   object-fit: cover;
   border-radius: 20%;
+}
+#cards {
+}
+.navbar {
+  font-size: larger;
+}
+.card img {
+  width: 286px;
+  height: 286px;
+}
+.card-title.h5 {
+  color: black;
+}
+
+.btn.btn-orange {
+  background-color: #fd7e14;
+  border-color: black;
+  color: black;
+}
+.btn.btn-orange:hover {
+  background-color: yellowgreen;
+  border-color: black;
+  color: black;
 }
