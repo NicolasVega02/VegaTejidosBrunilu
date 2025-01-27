@@ -40,3 +40,6 @@ h1 {
   border-color: black;
   color: black;
 }
+.cartWidgetContainer {
+  align-items: end;
+}
