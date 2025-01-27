@@ -11,7 +11,7 @@ function BasicExample() {
    
    <Navbar expand="lg" className="contenedorNavBar" >
       <Container>
-        <Navbar.Brand as={NavLink} to = '/'><img className = "imgLogo" src="src/imagenes/logoTejidos.jpg" alt="tejidosBruniluLogo" /></Navbar.Brand>
+        <Navbar.Brand as={NavLink} to = '/'><img className = "imgLogo" src="public/imagenes/logoTejidos.jpg" alt="tejidosBruniluLogo" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
