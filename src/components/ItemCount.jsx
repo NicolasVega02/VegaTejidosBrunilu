@@ -4,14 +4,12 @@ import useCounter from '../hooks/useCounter';
 const ItemCount = ({stock, onAdd}) => {
 
     const {count,add,subtract} = useCounter (stock)
-    
 
-        
 
     const addToCart = () =>{
-      //  setPurchase(true)
         onAdd(count)
     }
+    
     return(
         <div>
             <div> 

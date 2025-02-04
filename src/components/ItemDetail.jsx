@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { useState , useContext } from 'react'
 import ItemCount from './ItemCount'
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { CartContext } from '../context/CartContext'
+
 
 
 const ItemDetail = ({ productDetail }) => {
-  const onAdd = (cantidad) => {
-      alert(`Agregaste ${cantidad} al carrito`);
+ 
+    const [compra, setCompra] = useState(false)
+    const {cart, addItem} = useContext(CartContext)
+
+    const onAdd = (cantidad) => {
+      setCompra(true)
+      addItem (productDetail, cantidad)
   };
 
   if (!productDetail) {
       return <p>Cargando detalles del producto...</p>;
   }
+  console.log(cart, "carrito")
 
   return (
       <div >
@@ -18,24 +28,13 @@ const ItemDetail = ({ productDetail }) => {
           <p>{productDetail.description}</p>
           <p>Stock disponible: {productDetail.stock} unidades</p>
           <p>Precio: ${productDetail.price}</p>
-          <ItemCount stock={productDetail.stock} onAdd={onAdd} />
-      </div>
+          {!compra 
+           ?<ItemCount stock={productDetail.stock} onAdd={onAdd} />
+            : <Button as={Link} to={`/cart`} className='btn btn-dark'>Ir al carrito</Button>
+            }
+        </div>
   );
 };
-// const ItemDetail = ({item}) => {
-//     const onAdd = (cantidad) => {
-//         alert(`Agregaste ${cantidad} al carrito`)
-//     }
-//   return (
-//     <div>
-//         <h1>Detalle de : {item.name}</h1>
-//         <img src={item.img} alt={item.name}/>
-//         <p>{item.description}</p>
-//         <p>Stock disponible:{item.stock} unidades</p>
-//         <p>Precio: ${item.price}</p>
-//         <ItemCount stock={item.stock} onAdd={onAdd}/>
-//     </div>
-//   )
-// }
+
 
 export default ItemDetail
