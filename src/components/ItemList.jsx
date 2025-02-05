@@ -1,11 +1,14 @@
 import React from 'react'
 import Item from './Item'
+import CenteredComponent from './CenteredComponent'
 
 const ItemList = ({productsList}) => {
   return (
-    <div id='cards' className='d-flex justify-content-evenly align-items-stretch' >
+    <CenteredComponent className='cardStyle'>
+        <div   className='d-flex justify-content-evenly align-items-stretch' >
         {productsList.map((product) => <Item key={product.id} product = {product}></Item>)}
-    </div>
+        </div>
+    </CenteredComponent>
   )
 }
 

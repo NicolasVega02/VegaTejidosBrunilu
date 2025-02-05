@@ -5,8 +5,8 @@ import ItemDetailContainer from './components/ItemDetailContainer'
 import NavBarReactBootstrap from './components/NavBarReactBootstrap'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import {CartProvider } from './context/CartContext'
-import CartWidget from './components/CartWidget'
-
+import  Cart from './components/CartContainer'
+import CartContainer from './components/CartContainer'
 
 function App() {
   
@@ -22,7 +22,7 @@ function App() {
         <Route path ='/' element = {<ItemListContainer greeting ='Bienvenido a Tejidos Brunilu'></ItemListContainer>}/>
         <Route path='/category/:categoryId' element={<ItemListContainer greeting='Categoria : '/>}/>
         <Route path='/item/:id' element = {<ItemDetailContainer/>}/>
-        <Route path='/cart' element = {<CartWidget/>}/>
+        <Route path='/cart' element = {<CartContainer/>}/>
       </Routes>
       </CartProvider>
     </BrowserRouter>

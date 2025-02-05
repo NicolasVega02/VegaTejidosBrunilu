@@ -18,7 +18,7 @@ function BasicExample() {
           <Nav className="me-auto">
             <Nav.Link href='https://www.instagram.com/tejidosbrunilu/?hl=es' target="_blank"><FaInstagram></FaInstagram></Nav.Link>
             <Nav.Link href="https://www.facebook.com/Tejidosbrunilu/?locale=es_LA" target="_blank"><FaFacebook></FaFacebook></Nav.Link>
-            <Nav.Link><CartWidget/></Nav.Link>
+            <Nav.Link as={NavLink} to ={'/cart'}><CartWidget/></Nav.Link>
             <NavDropdown title="Categorias" id="basic-nav-dropdown" className='navbar'>
               <NavDropdown.Item as={NavLink} to = 'category/amigurumis'>Amigurumis 🧸</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to = 'category/indumentaria'>

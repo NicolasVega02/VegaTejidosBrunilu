@@ -3,6 +3,8 @@ import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import { CartContext } from '../context/CartContext'
+import Loader from './Loader';
+import CenteredComponent from './CenteredComponent';
 
 
 
@@ -17,13 +19,13 @@ const ItemDetail = ({ productDetail }) => {
   };
 
   if (!productDetail) {
-      return <p>Cargando detalles del producto...</p>;
+      return <p><Loader></Loader></p>;
   }
   console.log(cart, "carrito")
 
   return (
-      <div >
-          <h1>Detalle de: {productDetail.name}</h1>
+    <CenteredComponent >
+          <h1 className='barraDeEncabezado'>Detalle de: {productDetail.name}</h1>
           <img src={productDetail.img} alt={productDetail.name} style={{width : '30%' }} />
           <p>{productDetail.description}</p>
           <p>Stock disponible: {productDetail.stock} unidades</p>
@@ -32,7 +34,7 @@ const ItemDetail = ({ productDetail }) => {
            ?<ItemCount stock={productDetail.stock} onAdd={onAdd} />
             : <Button as={Link} to={`/cart`} className='btn btn-dark'>Ir al carrito</Button>
             }
-        </div>
+    </CenteredComponent>
   );
 };
 

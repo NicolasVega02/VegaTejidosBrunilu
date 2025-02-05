@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { getOneProduct  , getProducts} from '../mock/data'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
+import Loader from './Loader'
 
 const ItemDetailContainer = () => {
     const [productDetail, setProductDetail]= useState({})
@@ -19,12 +20,12 @@ const ItemDetailContainer = () => {
     },[])
   return ( 
     
-    <div> 
+    <div className='fondoVerde'> 
       {loading
-      ? <p>Cargando detalle del producto...</p>
+      ? <Loader/>
       : <ItemDetail productDetail={productDetail}/>
       }
-      </div>
+    </div>
 
        
     

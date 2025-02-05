@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 const Item = ({product}) => {
     console.log(product)
   return (
- 
-  <Card style={{borderColor:'#fd7e14', width: '18rem' , marginTop:'15', height:'100%'}}>
+ <div >
+  <Card className='cardStyle'>
       <Card.Img variant="top" src={product.img} alt={product.name} />
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
@@ -19,6 +19,7 @@ const Item = ({product}) => {
         <Button as={Link} to={`/item/${product.id}`} className='btn-orange' >Comprar</Button>
       </Card.Body>
     </Card>
+    </div>
   
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 const CenteredComponent = ({children}) => {
   return (
-    <div style={{display:'flex', alignItems:'center', minHeight:'80vh', flexDirection:'column', width:'100%'}}>
+    <div style={{width:'100%', display:'flex', justifyContent:'center', alignItems:'center', flexDirection : 'column'}}>
         {children}
     </div>
   )
