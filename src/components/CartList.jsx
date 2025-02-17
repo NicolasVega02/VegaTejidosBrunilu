@@ -1,21 +1,25 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 import CartItem from './CartItem'
+import { Link } from 'react-router-dom'
+
 
 const CartList = () => {
 
-    const {cart, clear, cartTotal} = useContext(CartContext)
+    const {cart, clearCart, cartTotal} = useContext(CartContext)
 
   return (
-    <div style={{width:'100%', padding:'2rem', display:'flex', flexDirection:'column', alignItems:'center'}}>
+   <>
+   <div >
         {cart.map((compra)=><CartItem compra={compra} key={compra.id}/>)}
         <span>Total a pagar: ${cartTotal()}</span>
-        <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', paddingTop:24}}>
+        <div >
 
-        <button className='btn btn-danger' onClick={clear}>Vaciar carrito</button>
-        <button className='btn btn-primary'>Terminar compra</button>
+        <button className='btn btn-danger' onClick={clearCart}>Vaciar carrito</button>
+        <Link to={'/checkout'} className='btn btn-primary'>Finalizar Compra</Link>
         </div>
     </div>
+    </>
   )
 }
 

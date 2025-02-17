@@ -21,7 +21,7 @@ const ItemDetail = ({ productDetail }) => {
   if (!productDetail) {
       return <p><Loader></Loader></p>;
   }
-  console.log(cart, "carrito")
+  
 
   return (
     <CenteredComponent >

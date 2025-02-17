@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 const Item = ({product}) => {
-    console.log(product)
+  
   return (
  <div >
   <Card className='cardStyle'>
