@@ -1,3 +1,20 @@
+body,
+#root {
+  background-color: rgba(153, 205, 50, 0.623);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Roboto Mono", serif !important;
+  color: #000 !important;
+}
 .contenedorNavBar {
   background-color: #fd7e14;
 }
@@ -14,8 +31,14 @@
   justify-content: space-between;
 }
 .navbar {
-  font-size: larger;
+  font-size: 2rem; /* Ajusta el tamaño según necesites */
+  font-weight: bold; /* Hace que se vea más similar a los dropdowns */
+  color: #000 !important; /* Asegura que el color sea igual */
+  font-family: "Roboto Mono", serif;
+  font-weight: 1000;
+  font-style: normal;
 }
+
 .card img {
   width: 286px;
   height: 286px;
@@ -34,14 +57,11 @@
   border-color: black;
   color: black;
 }
-.fondoVerde {
-  background-color: rgba(153, 205, 50, 0.623);
-  width: 100%;
-}
+
 .cardStyle {
-  border: 2px solid #fd7e14 !important; /* Color del borde */
-  width: 18rem !important; /* Ancho de la card */
-  margin-top: 15px !important; /* Margen superior */
-  height: 100% !important; /* Altura completa */
-  margin-left: 10px !important; /* Margen izquierdo */
+  border: 2px solid #fd7e14 !important;
+  width: 18rem !important;
+  margin-top: 15px !important;
+  height: 100% !important;
+  margin-left: 10px !important;
 }

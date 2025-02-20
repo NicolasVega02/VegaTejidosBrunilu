@@ -8,7 +8,7 @@ const CartWidget = () => {
   return (
     <div className='cartWidgetContainer'>
         <span ><BsCart/></span>
-        <Badge bg="danger">{cartQuantity()}</Badge>
+        {cartQuantity() > 0 && <Badge bg="danger">{cartQuantity()}</Badge>}
        
         </div>
   )

@@ -9,7 +9,7 @@ const Item = ({product}) => {
   
   return (
  <div >
-  <Card className='cardStyle'>
+  <Card  className='cardStyle' style={{fontFamily : '"Roboto Mono", serif'} }>
       <Card.Img variant="top" src={product.img} alt={product.name} />
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>

@@ -37,7 +37,7 @@ useEffect(()=>{
 
 
   return (
-    <div className='fondoVerde'>
+    <div className='d-flex justify-content-evenly align-items-stretch'>
     {loader ? <Loader/>
       :
       <CenteredComponent >

@@ -6,7 +6,7 @@ const products = [
        price : 5000,
        category : 'bebe',
        description : 'Gorro para bebe tejido con hilo 100% algodon',
-       img : '/public/imagenes/gorroZorro.jpeg',
+       img : '/public/imagenes/cactus.jpeg',
        stock:5
 
     },
