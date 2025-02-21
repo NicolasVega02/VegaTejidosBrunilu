@@ -1,15 +1,21 @@
 import React from 'react'
 import Item from './Item'
-import CenteredComponent from './CenteredComponent'
+import { Col, Container, Row } from 'react-bootstrap';
 
 const ItemList = ({productsList}) => {
   return (
-    <CenteredComponent className='cardStyle'>
-        <div   className='d-flex justify-content-evenly align-items-stretch' >
-        {productsList.map((product) => <Item key={product.id} product = {product}></Item>)}
-        </div>
-    </CenteredComponent>
-  )
-}
+    
+    <Container fluid>
+    <Row className="justify-content-center">
+      {productsList.map((product) => (
+        <Col key={product.id} xs={12} sm={6} md={3} className="mb-4">
+          <Item product={product} />
+        </Col>
+      ))}
+    </Row>
+  </Container>
+);
+};
+ 
 
 export default ItemList

@@ -3,7 +3,6 @@ import { useEffect , useState } from "react"
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 import Loader from './Loader'
-import CenteredComponent from './CenteredComponent'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { dataBase} from '../services/firebase'
 
@@ -25,6 +24,7 @@ useEffect(()=>{
   .then((res) => {
     const list = res.docs.map((doc) => {
       return {
+        
         id: doc.id,
         ...doc.data()
       };
@@ -37,13 +37,13 @@ useEffect(()=>{
 
 
   return (
-    <div className='d-flex justify-content-evenly align-items-stretch'>
+    <div className='itemListContainer'>
     {loader ? <Loader/>
       :
-      <CenteredComponent >
-      <h1>{greeting} {categoryId && <span style={{textTransform :'capitalize'}}>  {categoryId}</span>}</h1>
+      <div >
+      <h1 className="centrado">{greeting} {categoryId && <span style={{textTransform :'capitalize'}}>  {categoryId}</span>}</h1>
       <ItemList productsList={productsList}></ItemList>
-      </CenteredComponent>
+      </div>
     }</div>
   )
 }

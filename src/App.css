@@ -33,10 +33,13 @@ p {
 .navbar {
   font-size: 2rem; /* Ajusta el tamaño según necesites */
   font-weight: bold; /* Hace que se vea más similar a los dropdowns */
-  color: #000 !important; /* Asegura que el color sea igual */
+  color: #583001 !important; /* Asegura que el color sea igual */
   font-family: "Roboto Mono", serif;
   font-weight: 1000;
   font-style: normal;
+}
+.navbar:hover {
+  color: #221300 !important;
 }
 
 .card img {
@@ -63,5 +66,39 @@ p {
   width: 18rem !important;
   margin-top: 15px !important;
   height: 100% !important;
-  margin-left: 10px !important;
+}
+.itemDetail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  gap: 30px;
+}
+.itemListContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.itemDetail img {
+  width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+.centrado {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+}
+.counterContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+  padding: 10px;
+  justify-content: flex-end;
+}
+.cartContainer {
+  background-color: white;
 }

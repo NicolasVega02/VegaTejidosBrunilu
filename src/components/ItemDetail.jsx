@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import { CartContext } from '../context/CartContext'
 import Loader from './Loader';
-import CenteredComponent from './CenteredComponent';
+import Card from 'react-bootstrap/Card';
+
 
 
 
@@ -24,17 +25,27 @@ const ItemDetail = ({ productDetail }) => {
   
 
   return (
-    <CenteredComponent >
-          <h1 className='barraDeEncabezado'>Detalle de: {productDetail.name}</h1>
-          <img src={productDetail.img} alt={productDetail.name} style={{width : '30%' }} />
-          <p>{productDetail.description}</p>
-          <p>Stock disponible: {productDetail.stock} unidades</p>
-          <p>Precio: ${productDetail.price}</p>
-          {!compra 
-           ?<ItemCount stock={productDetail.stock} onAdd={onAdd} />
+    <div className='itemDetail'>
+          <Card.Img variant="top" src={productDetail.img} alt={productDetail.name} />
+        <div className='infoContainer'>
+          <Card.Body>
+            <Card.Title><h1>{productDetail.name}</h1></Card.Title>
+              <Card.Text>
+                <p>{productDetail.description}</p>
+                <p>Stock disponible: {productDetail.stock} unidades</p>
+                <p>Precio: ${productDetail.price}</p>
+              </Card.Text>
+          </Card.Body>  
+        
+            <div className='counterContainer'> 
+            {!compra 
+            ?<ItemCount stock={productDetail.stock} onAdd={onAdd} />
             : <Button as={Link} to={`/cart`} className='btn btn-dark'>Ir al carrito</Button>
             }
-    </CenteredComponent>
+            </div>
+        </div>
+     
+    </div>
   );
 };
 
