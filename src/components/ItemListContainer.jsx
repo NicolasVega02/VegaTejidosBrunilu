@@ -12,14 +12,14 @@ const ItemListContainer = ({greeting}) => {
   const [productsList, setProductsList] = useState([])
   const [loader, setLoader] = useState(false)
   const {categoryId} = useParams()
-//Firebase
+
 useEffect(()=>{
   setLoader(true)
-//conectamos con la coleccion
+
   const productsCollection = categoryId ? 
   query(collection(dataBase, "products"),where("category" , "==" , categoryId))
   : collection(dataBase , "products")
-  //pedimos los dats AKA docs
+
   getDocs(productsCollection)
   .then((res) => {
     const list = res.docs.map((doc) => {

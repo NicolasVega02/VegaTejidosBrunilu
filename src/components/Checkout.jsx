@@ -45,17 +45,15 @@ const Checkout = () => {
       date : serverTimestamp()
       } 
     
-      // Creamos la referencia a la coleccion
+      
       const ventas = collection(dataBase  , "ventas")
   
-      // Agregamos el documento
       
-      //addDoc devuelve una promesa
+      
+      
       addDoc(ventas , venta)
       .then((res) => {
-      
-        //OPCIONAL ACTUALIZAR STOCK 
-      
+        
         setVentaId(res.id)
         clearCart()
         Swal.fire({

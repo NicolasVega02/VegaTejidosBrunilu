@@ -15,13 +15,11 @@ const ItemDetailContainer = () => {
 
     useEffect(()=>{
       setLoading(true)
-      //conectar con nuestra collection
+    
       const productCollection = collection(dataBase, "products")
-      //crear una referencia
+
       const docRef= doc(productCollection,id )
-      //Paso mas corto como la ppt
-      // const docRef= doc(db, "products", id)
-      //traer el documento
+
       getDoc(docRef)
       .then((res)=> {
         if(res.data()){

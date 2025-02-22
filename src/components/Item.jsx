@@ -13,7 +13,6 @@ const Item = ({product}) => {
 
     <div>
       <Card className="cardStyle" style={{ fontFamily: '"Roboto Mono", serif' }}>
-        {/* Si hay más de 1 imagen, usar Carousel */}
         {product.img && product.img.length > 1 ? (
           <Carousel>
             {product.img.map((img, index) => (
@@ -23,7 +22,6 @@ const Item = ({product}) => {
             ))}
           </Carousel>
         ) : (
-          // Si hay solo 1 imagen, mostrarla como Card.Img
           <Card.Img variant="top" src={product.img?.[0]} alt={product.name} />
         )}
 

@@ -43,7 +43,6 @@ const ItemDetail = ({ productDetail }) => {
             ))}
           </Carousel>
         ) : (
-          // Si solo hay una imagen, mostrarla directamente
           <Card.Img variant="top" src={productDetail.img?.[0]} alt={productDetail.name} />
         )}
         

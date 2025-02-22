@@ -48,7 +48,7 @@ const CartList = () => {
         </tbody>
         <tfoot className="table-secondary">
           <tr>
-            <td colSpan="4"></td> {/* Celdas vacías para alinear el total */}
+            <td colSpan="4"></td> 
             <td className="fw-bold">Total a pagar:</td>
             <td className="fw-bold"> ${cartTotal()}</td>
           </tr>
