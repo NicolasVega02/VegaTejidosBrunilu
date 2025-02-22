@@ -10,7 +10,7 @@ const CartItem = ({compra}) => {
       </td>
       <td>
         <div style={{display:'flex' , gap:'10px', justifyContent:'center'}}>
-          <img src={compra.img} alt={compra.name} style={{width:'5rem'}}/>
+          <img src={compra.img[0]} alt={compra.name} style={{width:'5rem'}}/>
           {compra.name}
         </div> 
       </td> 

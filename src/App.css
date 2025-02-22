@@ -15,6 +15,10 @@ p {
   font-family: "Roboto Mono", serif !important;
   color: #000 !important;
 }
+.carousel h1,
+h3 {
+  color: #221300 !important;
+}
 .contenedorNavBar {
   background-color: #fd7e14;
 }
@@ -31,9 +35,9 @@ p {
   justify-content: space-between;
 }
 .navbar {
-  font-size: 2rem; /* Ajusta el tamaño según necesites */
-  font-weight: bold; /* Hace que se vea más similar a los dropdowns */
-  color: #583001 !important; /* Asegura que el color sea igual */
+  font-size: 2rem;
+  font-weight: bold;
+  color: #583001 !important;
   font-family: "Roboto Mono", serif;
   font-weight: 1000;
   font-style: normal;
@@ -76,20 +80,43 @@ p {
   margin: auto;
   padding: 20px;
   gap: 30px;
+  border-style: dotted;
+  border-radius: 3%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.itemDetail2 {
+  border-style: dotted;
+  padding: 20px;
+  border-radius: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: rgba(129, 172, 42, 0.452);
+  box-shadow: 10px 18px rgba(0, 0, 0, 0.3);
+  max-height: 50%;
 }
 .itemListContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
+  margin-left: 3%;
 }
 .itemDetail img {
   width: 400px;
   height: auto;
   object-fit: contain;
+  max-width: 20rem;
 }
 .centrado {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
+  justify-content: center;
+}
+.despedida {
+  margin-top: 15%;
+}
+.despedida h1,
+h3 {
+  margin-bottom: 10%;
 }
 .counterContainer {
   margin-top: 20px;
@@ -101,4 +128,16 @@ p {
 }
 .cartContainer {
   background-color: white;
+}
+.formContainer {
+  padding: 5%;
+  border-radius: 10px;
+  border-style: dotted;
+  width: 60%;
+  margin: 20px auto;
+  background-color: rgba(129, 172, 42, 0.452);
+  box-shadow: 10px 18px rgba(0, 0, 0, 0.1);
+}
+.form {
+  width: 200%;
 }

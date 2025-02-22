@@ -1,8 +1,22 @@
-# React + Vite
+# Tejidos Brunilu Shop 🛒🧶
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto E-commerce desarrollado con React - JavaScript.
+Tienda virtual de elementos tejidos.
 
-Currently, two official plugins are available:
+### Instalación ⚙️
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone el repositorio
+2. Ejecute npm install para instalar dependencias y crear la carpeta node_modules
+3. Ejecute npm run dev para levantalo en servidor local
+
+### Librerias utilizadas 📖
+
+- [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/): utilizada para el styling de la app.
+- [React Bootstrapp](https://react-bootstrap.netlify.app/):utilizada para el styling de la app.
+- [Firebase](https://firebase.google.com/): utilizado como base de datos.
+- [React Router Dom](https://reactrouter.com/): navegación por rutas.
+- [SweetAlert](https://sweetalert2.github.io/): utilizado para alertas y confirmaciones. -[React Spinners](https://www.davidhu.io/react-spinners/):utilizada para el Loader.
+
+## Demostración
+
+[![Video Demostrativo](./public/imagenes/TejidosBruniluShop.jpg)](https://youtu.be/_nBpBQGHlZ8)

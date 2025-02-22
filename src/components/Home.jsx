@@ -5,7 +5,7 @@ import { Card, Carousel, Image } from 'react-bootstrap'
 const Home = () => {
   return (
    
-     <Carousel>
+     <Carousel className='carousel'>
           <Carousel.Item interval={1000}>
           <Image text="First slide" src="../../public/imagenes/carousel3.jpg" />
             <Carousel.Caption>
@@ -15,7 +15,7 @@ const Home = () => {
               </h3>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item interval={100}>
+          <Carousel.Item interval={1000}>
             <Image text="First slide" src="../../public/imagenes/carousel1.jpg" />
             <Carousel.Caption>
               <h1>Lo mejor para tu bebe ♥</h1>
