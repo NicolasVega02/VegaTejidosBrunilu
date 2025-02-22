@@ -15,7 +15,8 @@ Tienda virtual de elementos tejidos.
 - [React Bootstrapp](https://react-bootstrap.netlify.app/):utilizada para el styling de la app.
 - [Firebase](https://firebase.google.com/): utilizado como base de datos.
 - [React Router Dom](https://reactrouter.com/): navegación por rutas.
-- [SweetAlert](https://sweetalert2.github.io/): utilizado para alertas y confirmaciones. -[React Spinners](https://www.davidhu.io/react-spinners/):utilizada para el Loader.
+- [SweetAlert](https://sweetalert2.github.io/): utilizado para alertas y confirmaciones.
+- [React Spinners](https://www.davidhu.io/react-spinners/):utilizada para el Loader.
 
 ## Demostración
 
